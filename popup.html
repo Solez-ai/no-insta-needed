@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Insta Needed</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="icon512.png" alt="Logo" class="logo">
+      <h1>No Insta Needed</h1>
+    </div>
+    
+    <div class="content">
+      <div id="initial-state">
+        <p class="description">Generate a universal link for this Reel</p>
+        <button id="copy-btn" class="primary-btn">
+          <span class="btn-text">Copy Custom Reel Link</span>
+        </button>
+      </div>
+
+      <div id="success-state" class="hidden">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="success-msg">Custom Link Copied!</p>
+        <div class="input-group">
+          <input type="text" id="result-link" readonly>
+        </div>
+        <button id="reset-btn" class="secondary-btn">Copy Again</button>
+      </div>
+
+      <div id="error-state" class="hidden">
+        <div class="error-icon">!</div>
+        <p id="error-msg" class="error-msg">Please open an Instagram Reel first.</p>
+        <button id="retry-btn" class="secondary-btn">Try Again</button>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

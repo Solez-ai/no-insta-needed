@@ -1,0 +1,196 @@
+:root {
+  --primary-color: #E1306C; /* Instagram-ish pink/red or maybe a custom brand color */
+  --primary-hover: #C13584;
+  --bg-color: #ffffff;
+  --text-color: #262626;
+  --secondary-text: #8e8e8e;
+  --border-radius: 12px;
+  --btn-height: 44px;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 320px;
+  height: auto;
+  min-height: 250px;
+  font-family: var(--font-family);
+  background: var(--bg-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  border-radius: 6px;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.content {
+  width: 100%;
+}
+
+.description {
+  font-size: 14px;
+  color: var(--secondary-text);
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  height: var(--btn-height);
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary-btn {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.primary-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.primary-btn:active {
+  transform: translateY(0);
+}
+
+.secondary-btn {
+  background: #f0f0f0;
+  color: var(--text-color);
+}
+
+.secondary-btn:hover {
+  background: #e0e0e0;
+}
+
+/* Success State */
+.hidden {
+  display: none !important;
+}
+
+#success-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.success-icon {
+  width: 48px;
+  height: 48px;
+  background: #E0F7FA;
+  color: #00838F;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.success-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.success-msg {
+  font-size: 16px;
+  font-weight: 600;
+  color: #00838F;
+  margin-bottom: 16px;
+}
+
+.input-group {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  font-family: var(--font-family);
+  font-size: 13px;
+  color: var(--secondary-text);
+  background: #fafafa;
+  outline: none;
+}
+
+/* Error State */
+#error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.error-icon {
+  width: 40px;
+  height: 40px;
+  background: #FFEBEE;
+  color: #C62828;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.error-msg {
+  font-size: 14px;
+  color: #C62828;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

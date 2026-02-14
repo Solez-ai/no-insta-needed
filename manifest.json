@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "no-insta-needed",
+  "version": "1.0",
+  "description": "Instantly generate a universal custom platform link for the current Instagram Reel.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "clipboardWrite"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon128.png",
+      "48": "icon128.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon512.png",
+    "48": "icon512.png",
+    "128": "icon128.png",
+    "512": "icon512.png"
+  }
+}
